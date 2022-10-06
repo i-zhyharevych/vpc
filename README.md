@@ -86,3 +86,24 @@
     * Within public-NACL select Subnet associations tab and click on edit Subnet associations
     * Select previously created public subnets from the list and save
 
+12. Create and configure public security group - Optional 
+    * Select name - Public-SG
+    * Add description
+    * Select vpc
+    * After SG is created -- edit inbound rules
+    * Select Custom TCP - 22
+    * Select source IP 0.0.0.0/0
+    * Add rule 
+    * Select HTTP - 80
+    * Select source IP 0.0.0.0/0
+
+13. Create and configure private security group - Optional 
+    * Select name - Private-SG
+    * Add description
+    * Select vpc
+    * After SG is created -- edit inbound rules
+    * Select Custom TCP - 22
+    * Select source  - Public-SG
+    * Add rule 
+    * Select HTTP - 80
+    * Select source - Public-SG
